@@ -44,7 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.tests',
+    'apps.blog',
     'bootstrapform',
 )
 
@@ -58,9 +58,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'testdrive.urls'
+ROOT_URLCONF = 'myblog.urls'
 
-WSGI_APPLICATION = 'testdrive.wsgi.application'
+WSGI_APPLICATION = 'myblog.wsgi.application'
 
 
 # Database
