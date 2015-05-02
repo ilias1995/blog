@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block content %}
+	<div class="register-body">
+			<form class="register" method="post" action="/register/">
+			{% csrf_token %}
+
+   <h5> {{ form|bootstrap }}</h5><br/>
+			<input type="submit" value="Регистрация" class="btn btn-register btn-lg active"/>
+		</form>
+	</div>
+</div>
+{% endblock %}

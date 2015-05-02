@@ -3,8 +3,12 @@
 {% block content %}
 <body>
 <div class="block-body">
+    {% if user.is_authenticated %}
+        <h3>Добропожаловать {{ user.username }} на мой Блог!!!</h3>
+    {% else %}
     <h3> Добропожаловать в мой блог тут вы узнаете про последние новости и самые новые технологи нашего времени.
     </h3>
+    {% endif %}
 </div>
 </body>
 {% endblock %}

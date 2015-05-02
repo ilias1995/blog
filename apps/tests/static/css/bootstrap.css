@@ -10,6 +10,9 @@
   text-transform: uppercase;
   word-spacing: -0.3em;
 }
+.register-body{
+    margin-left: 35%;
+}
 .block-nav {
   padding-left: 0;
   margin-bottom: 0;

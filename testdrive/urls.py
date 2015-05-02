@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     url(r'^logout/$', 'apps.tests.views.user_logout', name='logout'),
     url(r'^login/$', 'apps.tests.views.login', name='login'),
     url(r'^delete/(?P<id>\d+)/$', 'apps.tests.views.delete', name='delete'),
+    url(r'^register/', 'apps.tests.views.register', name='register'),
     # Examples:
     # url(r'^$', 'testdrive.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),

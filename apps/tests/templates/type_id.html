@@ -13,11 +13,16 @@
     Время добовление: {{ comments.add_date }}<br/>
     Коментария: {{ comments.comment }}<br/><hr/>
     {% endfor %}
+    {% if user.is_authenticated %}
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input class="btn btn-index btn-lg active" type="submit" value="comment" />
 </form>
+    {% else %}
+        <h5>Что бы оставить коментарии пожалуйста<a href="/register/"> регистрируйтесь</a></h5>
+
+    {% endif %}
 </div>
 </body>
 {% endblock %}
