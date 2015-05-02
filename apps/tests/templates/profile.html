@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+<div class="block-body">
+    <h4>Имя: {{ user.first_name }}</h4><br/>
+	<h4>Фамилия: {{ user.last_name }}</h4><br/>
+	<h4>Почтовый адрес: {{ user.email }}</h4><br/><hr/>
+
+    {% for blog in blog %}
+        <h3><a href="/type/{{ blog.id }}/ ">{{ blog.blog_name }}</a> </h3><hr/>
+        <a href='/delete/{{ blog.id }}/'> Delete</a> <br/><hr/>
+    {% endfor %}
+</div>
+</body>
+{% endblock %}

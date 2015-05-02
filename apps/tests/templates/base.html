@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<html>
+<head lang="en">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <title> News </title>
+</head>
+<body>
+<h1 class="h1-index">News-Blog</h1>
+<nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+              <ul class="nav navbar-nav">
+                <li><a href="/">Домой</a></li>
+                  {% for blogtype in blogtype %}
+                  <li><a href="{% url 'type_blog' blogtype.id %}">{{ blogtype.type_name }}</a></li>
+                  {% endfor %}
+
+                      {% if user.is_active and user.is_staff %}
+                        <li><a href="/add_blog">Добавить</a></li>
+                         <li><a href="/profile">Личный кабинет</a></li>
+                        <li><a class="job-logout" href="/logout">Выход</a></li>
+                    {% elif user.is_authenticated %}
+                         <li><a class="job-logout" href="/logout">Выход</a></li>
+                      {% else %}
+                         <li><a href="/login">Вход</a></li>
+                      {% endif %}
+              </ul>
+            </div>
+          </div>
+    </nav>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+<div class="block-body">
+    <h1>{{ blog.blog_name }}</br></h1>
+   Тип: {{ blog.blog_type }}</br>
+   Добавил: {{ blog.user }}</br>
+   Время добовление: {{ blog.add_date }}</br><hr/>
+    {{ blog.blog_text }}<br/><hr/>
+    {% for comments in blog.comments_set.all %}
+    Добавил: {{ comments.user }}<br/>
+    Время добовление: {{ comments.add_date }}<br/>
+    Коментария: {{ comments.comment }}<br/><hr/>
+    {% endfor %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="btn btn-index btn-lg active" type="submit" value="comment" />
+</form>
+</div>
+</body>
+{% endblock %}

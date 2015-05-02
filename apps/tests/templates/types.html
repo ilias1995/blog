@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+<div class="block-body">
+    {% for blog in blogtypes.blog_set.all %}
+   Тип: {{ blog.blog_type }}</br>
+   Добавил: {{ blog.user }}</br>
+   Название стати: {{ blog.blog_name }}</br>
+   Время добовление: {{ blog.add_date }}</br>
+    <a href="/type/{{ blog.id }}"> Читать... </a><hr/>
+    {% endfor %}
+</div>
+</body>
+{% endblock %}
