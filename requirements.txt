@@ -30,7 +30,7 @@ django-tumblr-reader==0.1.0
 gunicorn==19.2.0
 html5lib==0.999
 httplib2==0.8
-lxml==3.3.3
+lxml==4.6.2
 meld3==1.0.0
 mock==1.0.1
 oauth2==1.5.211
