@@ -28,7 +28,7 @@ django-redis-sessions==0.4.0
 django-social-auth==0.7.28
 django-tumblr-reader==0.1.0
 gunicorn==19.2.0
-html5lib==0.999
+html5lib==0.999999999
 httplib2==0.8
 lxml==3.3.3
 meld3==1.0.0
